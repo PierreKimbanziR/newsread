@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Reader</title>
+</head>
+<body>
+    <h1>What'up in the world</h1>
+    <div class="container">{% for new, d, i in news_list%}
+        <h2>{{new}}</h2>
+        {{value | linebreaks}}
+        <p>{{d}}</p>
+        {{value | linebreaks}}
+        <img src="{{i}}" alt="">
+        {% endfor%}
+    </div>
+
+</body>
+</html>
