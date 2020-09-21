@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Reader</title>
+    <title>Your news feed</title>
 </head>
 <body>
-<h1>Whats'up in the world</h1>
+<h1>The lastest news</h1>
 
-{% for new, d, i in news_list%}
+{% for new, d, i, lt in news_list%}
 
 <div class="card" style="width: 18rem;">
   <img src="{{i}}" class="card-img-top" alt="">
   <div class="card-body">
     <h5 class="card-title">{{new}}</h5>
     <p class="card-text">{{d}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="{{lt}}" target="_blank" class="btn btn-primary">Read More</a>
   </div>
 </div>
         {% endfor%}

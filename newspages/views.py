@@ -12,6 +12,7 @@ def Bbc(request):
     description =  []
     news = []
     images = []
+    links_to_article = []
 
     for i in range(len(articles)):
         set_of_articles = articles[i]
@@ -19,8 +20,9 @@ def Bbc(request):
         description.append(set_of_articles['description'])
         news.append(set_of_articles['title'])
         images.append(set_of_articles['urlToImage'])
+        links_to_article.append(set_of_articles['url'])
 
-    news_list = zip(news, description, images)
+    news_list = zip(news, description, images, links_to_article)
 
     return render(request, 'newspages/base.html', context={"news_list":news_list})
 
@@ -33,6 +35,7 @@ def Abc_News(request):
     description =  []
     news = []
     images = []
+    links_to_article = []
 
     for i in range(len(articles)):
         set_of_articles = articles[i]
@@ -40,8 +43,10 @@ def Abc_News(request):
         description.append(set_of_articles['description'])
         news.append(set_of_articles['title'])
         images.append(set_of_articles['urlToImage'])
+        links_to_article.append(set_of_articles['url'])
 
-    news_list = zip(news, description, images)
+
+    news_list = zip(news, description, images, links_to_article)
 
     return render(request, 'newspages/base.html', context={"news_list":news_list})
 
@@ -54,6 +59,7 @@ def AP(request):
     description =  []
     news = []
     images = []
+    links_to_article = []
 
     for i in range(len(articles)):
         set_of_articles = articles[i]
@@ -61,7 +67,9 @@ def AP(request):
         description.append(set_of_articles['description'])
         news.append(set_of_articles['title'])
         images.append(set_of_articles['urlToImage'])
+        links_to_article.append(set_of_articles['url'])
 
-    news_list = zip(news, description, images)
+
+    news_list = zip(news, description, images, links_to_article)
 
     return render(request, 'newspages/base.html', context={"news_list":news_list})

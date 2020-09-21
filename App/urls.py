@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from newspages import views
 from newspages import urls
+from users import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('newspages.urls'))
+    path('', include('newspages.urls')),
+    path('register/', include('users.urls'))
+
 ]
