@@ -10,9 +10,10 @@
 <body>
 <h1>The lastest news</h1>
 
+
 {% for new, d, i, lt in news_list%}
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" mx>
   <img src="{{i}}" class="card-img-top" alt="">
   <div class="card-body">
     <h5 class="card-title">{{new}}</h5>
