@@ -24,7 +24,7 @@ def Bbc(request):
 
     news_list = zip(news, description, images, links_to_article)
 
-    return render(request, 'newspages/base.html', context={"news_list":news_list})
+    return render(request, 'newspages/news.html', context={"news_list":news_list})
 
 def Abc_News(request):
     api_key = os.environ.get('NEWS_API_KEY')
@@ -48,7 +48,7 @@ def Abc_News(request):
 
     news_list = zip(news, description, images, links_to_article)
 
-    return render(request, 'newspages/base.html', context={"news_list":news_list})
+    return render(request, 'newspages/news.html', context={"news_list":news_list})
 
 def AP(request):
     api_key = os.environ.get('NEWS_API_KEY')
@@ -72,4 +72,7 @@ def AP(request):
 
     news_list = zip(news, description, images, links_to_article)
 
-    return render(request, 'newspages/base.html', context={"news_list":news_list})
+    return render(request, 'newspages/news.html', context={"news_list":news_list})
+
+def home(request):
+    return render(request, 'newspages/base.html')
