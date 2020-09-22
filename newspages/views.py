@@ -13,6 +13,8 @@ def Bbc(request):
     news = []
     images = []
     links_to_article = []
+    journal_name = articles[0]['source']['name']
+
 
     for i in range(len(articles)):
         set_of_articles = articles[i]
@@ -24,7 +26,7 @@ def Bbc(request):
 
     news_list = zip(news, description, images, links_to_article)
 
-    return render(request, 'newspages/news.html', context={"news_list":news_list})
+    return render(request, 'newspages/news.html', context={"news_list":news_list, "journal_name":journal_name})
 
 def Abc_News(request):
     api_key = os.environ.get('NEWS_API_KEY')
@@ -36,6 +38,8 @@ def Abc_News(request):
     news = []
     images = []
     links_to_article = []
+    journal_name = articles[0]['source']['name']
+
 
     for i in range(len(articles)):
         set_of_articles = articles[i]
@@ -48,7 +52,7 @@ def Abc_News(request):
 
     news_list = zip(news, description, images, links_to_article)
 
-    return render(request, 'newspages/news.html', context={"news_list":news_list})
+    return render(request, 'newspages/news.html', context={"news_list":news_list, "journal_name":journal_name})
 
 def AP(request):
     api_key = os.environ.get('NEWS_API_KEY')
@@ -60,6 +64,8 @@ def AP(request):
     news = []
     images = []
     links_to_article = []
+    journal_name = articles[0]['source']['name']
+
 
     for i in range(len(articles)):
         set_of_articles = articles[i]
@@ -72,7 +78,8 @@ def AP(request):
 
     news_list = zip(news, description, images, links_to_article)
 
-    return render(request, 'newspages/news.html', context={"news_list":news_list})
+    return render(request, 'newspages/news.html', context={"news_list":news_list, "journal_name":journal_name})
 
 def home(request):
-    return render(request, 'newspages/base.html')
+    return render(request, 'newspages/home.html')
+

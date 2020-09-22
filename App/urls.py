@@ -21,7 +21,8 @@ from users import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('newspages.urls')),
-    path('register/', include('users.urls'))
+    path('news/', include('newspages.urls')),
+    path('users/', include('users.urls')),
+    path('',views.home, name='home' )
 
 ]
