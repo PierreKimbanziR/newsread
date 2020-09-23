@@ -2,14 +2,16 @@
 {% block content %}
 
 <div class="row justify-content-center">
-  <div class="col-lg-8"></div>
-  <h1>The lastest news from {{journal_name}}</h1>
+  <div class="card text-white bg-dark border-white mt-4 mb-4 col-lg-6 text-center">
+    <h1>The lastest news from {{journal_name}}</h1>
+  </div>
 </div>
 
 {% for new, d, i, lt in news_list%}
 <div class="row justify-content-center">
   <div class="col-lg-8">
-    <div class="card border-dark mb-3">
+    <div class="card border-white mb-4 text-white bg-dark">
+
     <img src="{{i}}" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">{{new}}</h5>
