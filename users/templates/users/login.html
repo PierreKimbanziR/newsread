@@ -1,7 +1,7 @@
 {% extends "newspages/base.html" %}
 {% block content %}
 <div class="row justify-content-center mt-4">
-    <div class="card mt-4 col-sm-6 mb-4">
+    <div class="card mt-4 col-sm-6 mb-4 shadow p-3">
     {% load crispy_forms_tags %}
     <div class="content-section">
         <form method="POST">
@@ -9,11 +9,11 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
             <fieldset class="form-group justify-content-center">
-                <legend class="border-bottom ">Log In</legend>
+                <legend class="border-bottom">Log In</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign In</button>
+                <button class="btn btn-dark" type="submit">Sign In</button>
             </div>
         </form>
         <div class="border-top pt-3 mb-2">
