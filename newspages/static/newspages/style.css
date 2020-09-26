@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    height: 100%;
+
+}
+
+/* #overriding {
+    background-color: black;
+    color: white;
+} */
+
+#border {
+    border-width: 3px;
+}
