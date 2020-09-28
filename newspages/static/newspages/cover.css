@@ -5,19 +5,19 @@ a:hover {
   color: #fff;
 }
 
-
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; 
+  text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
 }
 
 
-
-
+/*
+ * Base structure
+ */
 
 html,
 body {
@@ -38,7 +38,9 @@ body {
 }
 
 
-
+/*
+ * Header
+ */
 .masthead {
   margin-bottom: 2rem;
 }
@@ -79,7 +81,9 @@ body {
 }
 
 
-
+/*
+ * Cover
+ */
 .cover {
   padding: 0 1.5rem;
 }
@@ -89,7 +93,9 @@ body {
 }
 
 
-
+/*
+ * Footer
+ */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
