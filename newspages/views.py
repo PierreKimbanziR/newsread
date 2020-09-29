@@ -29,6 +29,7 @@ def Bbc(request):
 
     return render(request, 'newspages/news.html', context={"news_list":news_list, "journal_name":journal_name})
 
+@login_required
 def Abc_News(request):
     api_key = os.environ.get('NEWS_API_KEY')
     newsapi = NewsApiClient(api_key)
@@ -55,6 +56,8 @@ def Abc_News(request):
 
     return render(request, 'newspages/news.html', context={"news_list":news_list, "journal_name":journal_name})
 
+
+@login_required
 def AP(request):
     api_key = os.environ.get('NEWS_API_KEY')
     newsapi = NewsApiClient(api_key)
