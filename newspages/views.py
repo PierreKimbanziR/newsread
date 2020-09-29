@@ -1,8 +1,9 @@
 import os
 from django.shortcuts import render
 from newsapi import NewsApiClient
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+@login_required
 def Bbc(request):
     api_key = os.environ.get('NEWS_API_KEY')
     newsapi = NewsApiClient(api_key)
