@@ -85,8 +85,7 @@ def AP(request):
     return render(request, 'newspages/news.html', context={"news_list":news_list, "journal_name":journal_name})
 
 def home(request):
-
-
-
     return render(request, 'newspages/home.html')
+
+
 
