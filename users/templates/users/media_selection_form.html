@@ -2,21 +2,11 @@
 {% block content %}
 
 <div class="row justify-content-center">
-    <div class="card mt-4 col-sm-6 mb-4 shadow p-3">
+    <div class="card mt-4 col-lg-10 mb-4 shadow p-3">
         {% load crispy_forms_tags %}
         <div class="content-section">
-            <form method="POST">
-                {% csrf_token %}
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                <fieldset class="form-group justify-content-center">
-                    <legend class="border-bottom ">Select your favorites news papers</legend>
-                    {{ form|crispy }}
-                </fieldset>
-                <div class="form-group">
-                    <button class="btn btn-outline-info" type="submit">submit</button>
-                </div>
-            </form>
+            {% crispy form %}
+
         </div>
             </div>
         </div>

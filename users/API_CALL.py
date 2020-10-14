@@ -1,8 +1,8 @@
 import os
-from django.shortcuts import render
 from newsapi import NewsApiClient
 
-def media_list():
+
+def get_sources_list():
     api_key = os.environ.get('NEWS_API_KEY')
     newsapi = NewsApiClient(api_key)
     full_sources = newsapi.get_sources()
@@ -14,8 +14,9 @@ def media_list():
         source_name = source["name"]
         source_id = source['id']
 
-        list_of_sources.append((source_name, source_id))
+        list_of_sources.append((source_id, source_name))
         tuple_of_sources = tuple(list_of_sources)
     return(tuple_of_sources)
 
-media_list()
+get_sources_list()
+

@@ -2,9 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterFrom
 from .forms import MediaSelectionForm
-import os
-from newsapi import NewsApiClient
 from django.contrib.auth.decorators import login_required
+from .MODEL_API_CALL import get_personal_medias
 
 
 def register(request):
@@ -22,7 +21,7 @@ def register(request):
 # Creating the form to allow users to select the news that they want to see displayed on their personal homepage
 
 @login_required
-def mediaselction(request):
+def mediaselection(request):
 
     if request.method == 'POST':
             form = MediaSelectionForm(request.POST)
@@ -38,3 +37,30 @@ def mediaselction(request):
 
 
     return render(request, 'users/media_selection_form.html', {'form':form})
+
+
+def personal_page(request):
+    list_of_headlines_to_display = get_personal_medias()
+    list_of_newslist =[]
+    for headlines in list_of_headlines_to_display:
+        articles = headlines['articles']
+        description =  []
+        news = []
+        images = []
+        links_to_article = []
+
+
+        for i in range(len(articles)):
+            print(articles)
+            set_of_articles = articles[i]
+
+            description.append(set_of_articles['description'])
+            news.append(set_of_articles['title'])
+            images.append(set_of_articles['urlToImage'])
+            links_to_article.append(set_of_articles['url'])
+
+        news_list = zip(news, description, images, links_to_article)
+        list_of_news.append(news_list)
+
+
+    return render(request, 'users/personal_page.html', context={"list_of_news":list_of_news})
