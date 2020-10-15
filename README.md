@@ -1,6 +1,6 @@
 # Newsread 
 
-## What? 
+## What ? 
 News Web application. I used [Django](https://www.djangoproject.com/) for the backend logic and [bootstrap4](https://getbootstrap.com/) for my templates. 
 The differents news articles are collected using [NewsApi](https://newsapi.org/).
 
