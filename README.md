@@ -8,7 +8,5 @@ The differents news articles are collected using NewsApi.
 It is possible to use the site without creating a user profile, but it is recommended to create one. Indeed, creating one allows you to choose the newspapers you wish to be displayed.
 A system of password reset by email has also been implemented. You just have to enter your email adress and a mail containing a reset link will be sent. Note that the adress mail has to mach the one used when creating your profile. 
 
-## Forms 
-There is diffenrents forms used in this app, most of them are made using the Django bult-in forms classes. For the style I used Crispy Forms and Bootstrap. 
-
-
+## Django Auth.views
+All of the views relating to the authentication process are based on the built-in django auth views.
