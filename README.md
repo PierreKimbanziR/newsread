@@ -10,3 +10,6 @@ A system of password reset by email has also been implemented. You just have to 
 
 ## Django Auth.views
 All of the views relating to the authentication process are based on the built-in django auth views [django auth-views] (https://docs.djangoproject.com/fr/1.8/_modules/django/contrib/auth/views/) .
+
+http://github.com - automatic!
+[GitHub](http://github.com)
