@@ -5,7 +5,7 @@ News Web application. I used [Django](https://www.djangoproject.com/) for the ba
 The differents news articles are collected using [NewsApi](https://newsapi.org/).
 
 ### Example of an article
-![dummy-article](image/article.png)
+![dummy-article](images/article.png)
 
 ## User registration
 It is possible to use the site without creating a user profile, but it is recommended to create one. Indeed, creating one allows you to choose the newspapers you wish to be displayed.
