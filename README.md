@@ -9,4 +9,4 @@ It is possible to use the site without creating a user profile, but it is recomm
 A system of password reset by email has also been implemented. You just have to enter your email adress and a mail containing a reset link will be sent. Note that the adress mail has to mach the one used when creating your profile. 
 
 ## Django Auth.views
-All of the views relating to the authentication process are based on the built-in django auth views.
+All of the views relating to the authentication process are based on the built-in django auth views [django auth-views] (https://docs.djangoproject.com/fr/1.8/_modules/django/contrib/auth/views/) .
