@@ -18,7 +18,7 @@ A system of password reset by email has also been implemented. You just have to 
 ![reset-password](images/resetpassword.png)
 
 ### Reset mail send succesfully
-![succes-reset](images/successemail.png)
+![succes-reset](images/success-email.png)
 
 ## Django Auth.views
 All of the views relating to the authentication process are based on the built-in [django auth-views](https://docs.djangoproject.com/fr/1.8/_modules/django/contrib/auth/views/) .
