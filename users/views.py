@@ -41,26 +41,30 @@ def mediaselection(request):
 
 def personal_page(request):
     list_of_headlines_to_display = get_personal_medias()
-    list_of_newslist =[]
+    list_of_news =[]
+    journal_names= []
+
     for headlines in list_of_headlines_to_display:
         articles = headlines['articles']
+
         description =  []
         news = []
         images = []
         links_to_article = []
-
+        journal_names.append(articles[0]['source']['name'])
+        print(journal_names)
 
         for i in range(len(articles)):
-            print(articles)
             set_of_articles = articles[i]
-
             description.append(set_of_articles['description'])
             news.append(set_of_articles['title'])
             images.append(set_of_articles['urlToImage'])
             links_to_article.append(set_of_articles['url'])
 
+
         news_list = zip(news, description, images, links_to_article)
         list_of_news.append(news_list)
+        complete_list = zip(list_of_news, journal_names)
 
 
-    return render(request, 'users/personal_page.html', context={"list_of_news":list_of_news})
+    return render(request, 'users/personal_page.html', context={'complete_list': complete_list})
